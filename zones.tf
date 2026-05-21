@@ -1,8 +1,26 @@
+resource "cloudflare_record" "rec_waap-security-uk_cname_www" {
+  zone_id = cloudflare_zone.zone_waap-security-uk.id
+  name    = "www"
+  type    = "CNAME"
+  content = "waap-security-blog.pages.dev"
+  proxied = true
+  ttl     = 1
+}
+
 resource "cloudflare_zone" "zone_aisecurities-uk" {
   zone       = "aisecurities.uk"
   account_id = "ec9e1f01ae075124aea715fcae3783c7"
   plan       = "free"
   type       = "full"
+}
+
+resource "cloudflare_record" "rec_aisecurities-uk_cname_www" {
+  zone_id = cloudflare_zone.zone_aisecurities-uk.id
+  name    = "www"
+  type    = "CNAME"
+  content = "ai-securities-blog.pages.dev"
+  proxied = true
+  ttl     = 1
 }
 
 resource "cloudflare_zone" "zone_falcons-edge-com" {
@@ -45,6 +63,15 @@ resource "cloudflare_zone" "zone_microsegmentation-uk" {
   account_id = "ec9e1f01ae075124aea715fcae3783c7"
   plan       = "free"
   type       = "full"
+}
+
+resource "cloudflare_record" "rec_microsegmentation-uk_cname_www" {
+  zone_id = cloudflare_zone.zone_microsegmentation-uk.id
+  name    = "www"
+  type    = "CNAME"
+  content = "microsegmentation-blog.pages.dev"
+  proxied = true
+  ttl     = 1
 }
 
 resource "cloudflare_zone" "zone_waap-security-uk" {
