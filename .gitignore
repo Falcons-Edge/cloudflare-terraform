@@ -1,0 +1,6 @@
+*.tfstate*
+.terraform/
+import.sh
+terraform.tfvars
+
+# Secrets loaded at runtime from GPG-encrypted store
