@@ -34,7 +34,7 @@ resource "cloudflare_record" "rec_falcons-edge-com_cname_www" {
   zone_id = cloudflare_zone.zone_falcons-edge-com.id
   name    = "www"
   type    = "CNAME"
-  content = "little-glade-5de2.falconsedge500.workers.dev"
+  content = "falcons-edge-web.pages.dev"
   proxied = true
   ttl     = 1
 }

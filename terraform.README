@@ -1,0 +1,6 @@
+     export CLOUDFLARE_API_TOKEN=$(gpg --decrypt ~/.hermes/secrets/secrets.txt.gpg 2>/dev/null | grep
+     "^CLOUDFLARE_API_TOKEN" | sed 's/^CLOUDFLARE_API_TOKEN=//')
+     cd ~/Repos/Falcons-Edge/cf-cloudflare
+     terraform plan
+     terraform apply
+

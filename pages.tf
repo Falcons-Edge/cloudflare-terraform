@@ -69,3 +69,9 @@ resource "cloudflare_pages_project" "waap_security_blog" {
     }
   }
 }
+
+resource "cloudflare_pages_project" "falcons_edge_web" {
+  account_id        = "ec9e1f01ae075124aea715fcae3783c7"
+  name              = "falcons-edge-web"
+  production_branch = "main"
+}
